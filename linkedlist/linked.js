@@ -27,10 +27,27 @@ class LinkedList {
         } 
         return counter;
     }
+    getFirst() {
+        return this.head;
+    }
+    getLast() {
+        if(!this.head) {
+            return null;
+        }
+        let node = this.head;
+        while(node) {
+            if(!node.next) {
+                return node;
+            }
+            node = node.next;
+        }
+    }
 }
 
 const newLinkedList = new LinkedList()
 newLinkedList.setHead(1234)
 newLinkedList.insertFirst(2345)
 newLinkedList.insertFirst(3456)
+console.log("first node : ",newLinkedList.getFirst())
+console.log("last node : ",newLinkedList.getLast())
 
