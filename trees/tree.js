@@ -14,6 +14,7 @@ class Node {
     }
 }
 
+
 class Tree {
     constructor() {
         this.root = null;
@@ -30,3 +31,13 @@ class Tree {
         return finalArr;
     }
 }
+
+let t = new Tree();
+t.root = new Node(1)
+t.root.add(123)
+t.root.add(456)
+t.root.add(789)
+
+
+console.log(t.traverseBF())
+//console.log(JSON.stringify(t,0,2))
