@@ -20,6 +20,13 @@ class Tree {
     }
 
     traverseBF() { // traverse breath first search
-
+        let arr = [this.root];
+        let finalArr = [];
+        while(arr.length) {
+            const node = arr.shift();
+            arr.push(...node.children);
+            finalArr.push(node)
+        }
+        return finalArr;
     }
 }
