@@ -31,15 +31,15 @@ let tree = {
 }
 
 
-function depthFirstTraverseTree(tree) {
+function breathFirstSearch(tree) {
     let arr = [tree];
-    let finalArray = [];
+    let treverseArray = [];
     while(arr.length) {
-        let node = arr.shift();
-        arr.push(...node.children)
-        finalArray.push(node.data)
+        let node = arr.shift(); // shift to remove first element
+        arr.unshift(...node.children); // unsift to add multiple elements at starting
+        treverseArray.push(node.data)
     }
-    return finalArray;
+    return treverseArray;
 }
 
-console.log(JSON.stringify(depthFirstTraverseTree(tree),0,2));
+console.log(JSON.stringify(breathFirstSearch(tree),0,2))
