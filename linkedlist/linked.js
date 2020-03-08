@@ -42,6 +42,9 @@ class LinkedList {
             node = node.next;
         }
     }
+    clear() {
+        this.head = null;
+    }
 }
 
 const newLinkedList = new LinkedList()
