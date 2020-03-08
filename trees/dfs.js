@@ -35,8 +35,8 @@ function depthFirstTraverseTree(tree) {
     let arr = [tree];
     let finalArray = [];
     while(arr.length) {
-        let node = arr.shift();
-        arr.push(...node.children)
+        let node = arr.shift(); // shift to remove first element
+        arr.push(...node.children) // push the lements at last
         finalArray.push(node.data)
     }
     return finalArray;
